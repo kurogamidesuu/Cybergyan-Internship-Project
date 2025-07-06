@@ -31,10 +31,10 @@ const UserBar = ({id, sNum, name, username, email, role, setToastMessage, setRef
         <span className="text-green-900 font-semibold">role: </span>
         <span className="text-green-700">{role}</span>
       </div>
-      <div className="w-[10%] flex items-center gap-2 mr-2">
-        <button className="bg-green-500 h-[80%] w-full rounded-md cursor-pointer hover:bg-green-700 transition background duration-300 ease text-2xl flex items-center justify-center">
+      <div className="w-[5%] flex items-center gap-2 mr-2">
+        {/* <button className="bg-green-500 h-[80%] w-full rounded-md cursor-pointer hover:bg-green-700 transition background duration-300 ease text-2xl flex items-center justify-center">
           <FiEdit3 />
-        </button>
+        </button> */}
         <button 
           className="bg-red-500 h-[80%] w-full rounded-md cursor-pointer hover:bg-red-700 transition background duration-300 ease text-2xl flex items-center justify-center"
           onClick={handleDelete}

@@ -12,7 +12,7 @@ const SearchBar = ({users, setUsers}) => {
   }
 
   return (
-    <div className='w-[90%] h-10 block m-auto'>
+    <div className='w-[85%] h-10 block'>
       <input 
         type="text"
         value={input}

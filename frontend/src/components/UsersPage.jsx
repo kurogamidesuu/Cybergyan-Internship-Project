@@ -23,7 +23,12 @@ const UsersPage = () => {
   return (
     <div className='px-5'>
       <h1 className='font-semibold text-2xl mb-5 border-b-2 pb-2'>Users</h1>
-      <SearchBar users={users} setUsers={setUsers} />
+      <div className='flex justify-center'>
+        <SearchBar users={users} setUsers={setUsers} />
+        <div className='w-[10%]'>
+          <button className='bg-slate-300 w-full h-full rounded-lg hover:bg-slate-400 transition background duration-200 ease-in-out active:bg-slate-500'>+ Add User</button>
+        </div>
+      </div>
       <div className='p-4 rounded-lg flex flex-col gap-5'>
         {users.length ? (
           users.map((user, index) => (
