@@ -1,6 +1,5 @@
 const express = require('express');
 const path = require('path');
-const { User } = require('./models/user.model');
 const mongoose = require('mongoose');
 require('dotenv').config();
 
@@ -10,6 +9,27 @@ const app = express();
 app.use(express.static(path.join(__dirname, '../frontend/dist')));
 
 mongoose.connect(process.env.MONGO_URI);
+
+const userSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+  username: {
+    type: String,
+    required: true,
+  },
+  email: {
+    type: String,
+    required: true,
+  },
+  role: {
+    type: String,
+    default: 'user',
+  }
+});
+
+const User = mongoose.model('User', userSchema);
 
 // API endpoints
 
